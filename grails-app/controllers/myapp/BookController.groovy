@@ -20,7 +20,7 @@ class BookController {
         // respond Book.list(params), model:[bookCount: Book.count()]
 
 
-        books = Book.search().list {
+        List<Book> bookList = Book.search().list {
 
             wildcard "title", "*"
 
@@ -31,9 +31,9 @@ class BookController {
         }
 
 
-        log.info "${books.size()} results"
+        log.info "${bookList.size()} results"
 
-        respond books, model: [bookCount: books.size()]
+        respond bookList, model: [bookCount: bookList.size()]
     }
 
     def show(Book book) {

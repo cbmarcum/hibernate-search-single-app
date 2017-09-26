@@ -21,9 +21,9 @@ class BootStrap {
                     title: 'The Stand',
                     author: 'Stephen King'
             )
-            book1.save(flush: true, failOnError: true)
+            book1.save(failOnError: true)
             book1.addToCategories(horrorCategory)
-            book1.save(flush: true, failOnError: true)
+            book1.save(failOnError: true)
         }
 
 
