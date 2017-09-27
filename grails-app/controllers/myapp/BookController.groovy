@@ -24,7 +24,7 @@ class BookController {
 
             wildcard "title", "*"
 
-            sort "title", "asc"
+            // sort "title", "asc"
 
             maxResults params.max
             // offset page.offset
